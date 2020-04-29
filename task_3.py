@@ -6,9 +6,9 @@ def reverse(username):
 	return (username[::-1]).upper()
 
 # tell Flask what URL should trigger our function.
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/reverse', methods=['GET', 'POST'])
 def index():
-	html_page = 'index.html'
+	html_page = 'reverse.html'
 
 	# if user clicks submit
 	if request.method == 'POST':	
