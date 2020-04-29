@@ -49,7 +49,7 @@ def insert_table(extracted_author,extracted_title):
 # tell Flask what URL should trigger our function.
 @app.route('/create_book', methods=['GET', 'POST'])
 def index():
-	html_page = 'books.html'
+	html_page = 'create_book.html'
 
 	# if user clicks submit
 	if request.method == 'POST':	

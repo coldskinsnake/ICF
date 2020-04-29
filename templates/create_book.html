@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Books</title>
+  </head>
+  <body>
+  <div>
+    <form role="form" method='POST' action='/create_book'>
+    <div class="form-group">
+    <label for="name">Author</label>
+    <input type="text" name="author">
+    </div>
+    <div class="form-group">
+    <label for="name">Title</label>
+    <input type="text" name="title">
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-default">Submit</button>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+      {% if messages %}
+    <p>{{ messages }}</p>
+    {% endif %}
+    </form>
+  </div>
+  </body>
+</html>
