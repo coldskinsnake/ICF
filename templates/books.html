@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html>
+<table class="table table-hover">
   <head>
-    <title>Books</title>
-  </head>
-  <body>
-  <div>
-    <form role="form" method='POST' action='/create_book'>
-    <div class="form-group">
-    <label for="name">Author</label>
-    <input type="text" name="author">
-    </div>
-    <div class="form-group">
-    <label for="name">Title</label>
-    <input type="text" name="title">
-    </div>
-    <br>
-    <br>
-    <button type="submit" class="btn btn-default">Submit</button>
-    {% if message %}
-    <p>{{ message }}</p>
-    {% endif %}
-      {% if messages %}
-    <p>{{ messages }}</p>
-    {% endif %}
-    </form>
-  </div>
-  </body>
-</html>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Datetime</th>        
+    </tr>
+  </thead>
+
+<tbody>
+  {% for row in items %}
+  <tr>
+  <th> {{ row[0] }}</th>
+  <th> {{ row[1] }}</th>
+  <th> {{ row[2] }}</th>
+  <th> {{ row[3] }}</th>
+  </tr> 
+  {% endfor %}
+  </tbody>
+
+</table>
